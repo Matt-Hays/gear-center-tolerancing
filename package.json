@@ -10,7 +10,9 @@
     "audit:screenshots": "node scripts/capture-ui-audit.mjs",
     "test": "vitest run",
     "test:unit": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "decimal.js": "^10.4.3",
@@ -27,6 +29,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/test-utils": "^2.4.6",
+    "gh-pages": "^6.3.0",
     "jsdom": "^26.0.0",
     "tailwindcss": "^4.1.1",
     "typescript": "^5.8.2",

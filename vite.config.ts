@@ -4,7 +4,10 @@ import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath, URL } from 'node:url';
 import { VitePWA } from 'vite-plugin-pwa';
 
+const base = '/gear-center-tolerancing/';
+
 export default defineConfig({
+  base,
   plugins: [
     vue(),
     tailwindcss(),
@@ -19,7 +22,8 @@ export default defineConfig({
         theme_color: '#101720',
         background_color: '#0b1017',
         display: 'standalone',
-        start_url: '/',
+        start_url: base,
+        scope: base,
         icons: [
           {
             src: 'icons/pwa-192.svg',

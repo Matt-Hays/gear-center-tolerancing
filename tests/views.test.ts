@@ -6,6 +6,7 @@ import NewAnalysisView from '@/views/NewAnalysisView.vue';
 import RecommendationView from '@/views/RecommendationView.vue';
 import ReviewView from '@/views/ReviewView.vue';
 import { serializeProject } from '@/lib/io/projectFiles';
+import { router } from '@/router';
 import { cloneProject, getBenchmarkCase } from './benchmarks/cases';
 import { useAnalysisStore } from '@/stores/analysis';
 
@@ -137,5 +138,9 @@ describe('workflow views', () => {
     expect(getAllByText('Measured runout Fr').length).toBeGreaterThan(0);
     expect(getAllByText('Mounting face runout').length).toBeGreaterThan(0);
     expect(getAllByText('Required before the result can clear the release gate.').length).toBeGreaterThan(0);
+  });
+
+  it('resolves the dashboard route under the configured Vite base path', () => {
+    expect(router.resolve({ name: 'dashboard' }).href).toBe(import.meta.env.BASE_URL);
   });
 });
