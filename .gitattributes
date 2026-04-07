@@ -1,0 +1,13 @@
+# Standardize repository text files on CRLF for this Windows-first workflow.
+* text=auto eol=crlf
+
+# Treat common binary assets as binary to avoid line-ending transforms.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
