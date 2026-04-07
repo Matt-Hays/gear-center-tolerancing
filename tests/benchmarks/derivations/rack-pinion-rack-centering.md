@@ -1,0 +1,28 @@
+# Rack and Pinion Rack-Centering Derivation
+
+- Fixture basis:
+  - Tooth count `z = 20`
+  - Outside diameter `d_a = 69.85 mm`
+  - Rack linear pitch `p_r = 9.974556675 mm`
+  - Confirmed nominal shaft size `38.1 mm`
+- Governing geometry:
+  - `m_t = d_a / (z + 2) = 69.85 / 22 = 3.175 mm`
+  - `d = z * m_t = 20 * 3.175 = 63.5 mm`
+  - `p = pi * m_t = 9.974556675 mm`
+  - Rack linear pitch equals circular pitch for the mating pinion, so `p_r = p`.
+- Centering packet:
+  - Pinion pitch radius `r = d / 2 = 31.75 mm`
+  - Pinion outside radius `r_a = d_a / 2 = 34.925 mm`
+  - Addendum / pitch-line offset from OD `r_a - r = 3.175 mm`
+- Keyed fit benchmark:
+  - Confirmed nominal size `38.1 mm`
+  - H7/h6 keyed fit band used by the active standards profile
+  - Recommended bore range `38.1 mm` to `38.125 mm`
+- Interference benchmark:
+  - Confirmed nominal size `38.1 mm`
+  - H7/s6 fit band used by the active standards profile
+  - Expected interference band `0.013 mm` to `0.054 mm`
+- Release-gate assumption for positive fixtures:
+  - Standards basis confirmed
+  - Damaged-tooth review completed
+  - Independent hand-check completed
