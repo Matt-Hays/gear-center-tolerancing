@@ -518,7 +518,6 @@ Run these commands when validating the repo itself:
 npm run dev
 npm run test:unit -- --run
 npm run build
-npm run audit:screenshots
 ```
 
 What each command covers:
@@ -526,9 +525,6 @@ What each command covers:
 - `npm run dev`: local interactive workflow testing
 - `npm run test:unit -- --run`: calculation, view, export, contrast, and store/theme tests
 - `npm run build`: production build plus type-check gate
-- `npm run audit:screenshots`: captures the five routes in light and dark themes at desktop and mobile widths
-
-The screenshot audit writes into `tmp-ui-audit-shots` and is meant to be paired with the automated unit suite before release review.
 
 ## Current Constraints And Known Gaps
 
@@ -551,7 +547,6 @@ The behavior described above is grounded in the current repository implementatio
 - `src/lib/exports/xlsx.ts`
 - `src/lib/exports/pdf.ts`
 - `docs/validation/iso1328-runout-validation.md`
-- `docs/validation/ui-audit-workflow.md`
 - `tests/engine.test.ts`
 - `tests/exports.test.ts`
 - `tests/views.test.ts`

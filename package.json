@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "audit:screenshots": "node scripts/capture-ui-audit.mjs",
     "test": "vitest run",
     "test:unit": "vitest run",
     "test:watch": "vitest",

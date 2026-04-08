@@ -102,11 +102,11 @@ describe('workflow views', () => {
     expect(queryByText('3,091.3272 in')).toBeNull();
   });
 
-  it('hides the engineering trace by default and shows ISO centering outputs in the result view', () => {
+  it('hides the engineering trace by default and shows standards trace metadata in the result view', () => {
     const store = useAnalysisStore();
     loadBenchmark(store, 'rack-pinion-rack-centering-keyed-imperial');
 
-    const { getByText, queryByText } = render(RecommendationView, {
+    const { getAllByText, getByText, queryByText } = render(RecommendationView, {
       global: {
         stubs: {
           RouterLink: true
@@ -118,7 +118,10 @@ describe('workflow views', () => {
     expect(getByText('Center before broach')).toBeTruthy();
     expect(getByText('Allowable center tolerance (TIR)')).toBeTruthy();
     expect(getByText('Allowable ISO runout FrT')).toBeTruthy();
+    expect(getByText('provisional')).toBeTruthy();
     expect(getByText('Reserve-budget worksheet')).toBeTruthy();
+    expect(getByText('Validation artifact: docs/validation/iso1328-runout-validation.md')).toBeTruthy();
+    expect(getAllByText(/not a direct ISO output/i).length).toBeGreaterThan(0);
     expect(getByText('Show trace')).toBeTruthy();
     expect(queryByText('Normalize measurements')).toBeNull();
   });
